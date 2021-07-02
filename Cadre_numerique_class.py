@@ -9,7 +9,7 @@ class Full_screen_window :
         self.height = self.tk.winfo_screenheight()
         self.width = self.tk.winfo_screenwidth()
 
-        print(self.width,self.height, self.marge)
+        print("fen width=",self.width," | fen height=",self.height," | marge=", self.marge)
         self.tk.geometry ("{0}x{1}+0+0".format(self.width - self.marge,self.height - self.marge))
 
         self.tk.attributes("-fullscreen", True)
