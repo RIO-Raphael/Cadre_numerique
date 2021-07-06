@@ -2,12 +2,12 @@
 The propose of this project is to write in python a little script allowing to make a dynamic diaporama from a directory with pictures.
 
 # Installation
-Installer : Pillow avec ses lignes de commandes (PowerShell ou bash) :
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade Pillow
-DOC : https://pillow.readthedocs.io/en/stable/reference/index.html
-Installer numpy :
+Installer numpy et scipy :
 pip install numpy
+pip install scipy
+
+Installation de Qt pour python :
+pip install pyside6
 
 # Comment lancer le script ?
 

@@ -1,28 +1,18 @@
 import sys
-from tkinter import *
-from Cadre_numerique_class import * 
-from Cadre_numerique_fct import * 
-from Cadre_numerique_cst import *
-from PIL import Image, ImageTk
+import random
+from PySide6 import *
+from Cadre_numerique_class import *
 
-fen = Full_screen_window()
+# Ouverture de la fenêtre
+print(QtCore.__version__)
+# fen = Full_screen_window()
+# fen.app.exec()
 
-#We make an image object
-photo = Image.open("aa.jpg")
+app = QtWidgets.QApplication([])
 
-#resize
-photo = resize_fit_to_screen(fen, photo)
+img = ImageViewer()
+img.load_file("aa.jpg")
+img._fit_to_window()
+img.show()
 
-#Load an image in the script
-img = ImageTk.PhotoImage(photo)
-
-canvas = Canvas(fen.tk, height=fen.height, width=fen.width)
-canvas.pack()
-
-canvas.create_image(0,0,anchor=NW,image=img)
- 
-# label = tk.Label(fen, image=photo)
-# label.pack()
-
-# We open the window
-# fen.tk.mainloop()
+sys.exit(app.exec())
